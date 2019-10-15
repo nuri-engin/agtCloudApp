@@ -6,10 +6,10 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-import Board from './components/board/Board';
-import EditB from './components/board/EditB';
-import CreateB from './components/board/CreateB';
-import ShowB from './components/board/ShowB'; 
+import User from './components/user/User';
+import EditU from './components/user/EditU';
+import CreateU from './components/user/CreateU';
+import ShowU from './components/user/ShowU'; 
 
 import Farm from './components/farm/Farm';
 import EditF from './components/farm/EditF';
@@ -26,10 +26,10 @@ ReactDOM.render(
         <Route exact path='/' component={App} />
         
         {/** USERS SCREENS */}
-        <Route exact path='/board' component={Board} />
-        <Route path='/editboard/:id' component={EditB} />  
-        <Route path='/createboard' component={CreateB} />
-        <Route path='/showboard/:id' component={ShowB} />
+        <Route exact path='/user' component={User} />
+        <Route path='/edituser/:id' component={EditU} />  
+        <Route path='/createuser' component={CreateU} />
+        <Route path='/showuser/:id' component={ShowU} />
 
         {/** FARMS SCREENS */}
         <Route exact path='/farm' component={Farm} /> 

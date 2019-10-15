@@ -2,30 +2,33 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
 
-class Board extends Component {
+class User extends Component {
   constructor(props) {
     super(props);
-    this.ref = firebase.firestore().collection('boards');
+    this.ref = firebase.firestore().collection('users');
     this.unsubscribe = null;
     this.state = {
-      boards: []
+      users: []
     };
   }
 
   onCollectionUpdate = (querySnapshot) => {
-    const boards = [];
+    const users = [];
     querySnapshot.forEach((doc) => {
-      const { title, description, author } = doc.data();
-      boards.push({
+      const { id, name, surname, email, isactive, isconfirmed } = doc.data();
+      users.push({
         key: doc.id,
         doc, // DocumentSnapshot
-        title,
-        description,
-        author,
+        id,
+        name,
+        surname,
+        email,
+        isactive,
+        isconfirmed
       });
     });
     this.setState({
-      boards
+      users
    });
   }
 
@@ -39,28 +42,34 @@ class Board extends Component {
         <div className="panel panel-default">
           <div className="panel-heading">
             <h3 className="panel-title">
-              BOARD LIST
+              USER LIST
             </h3>
           </div>
           <div className="panel-body">
             <div>
-              <h4><Link to="/createboard" className="btn btn-primary">Add Board</Link></h4>
+              <h4><Link to="/createuser" className="btn btn-primary">Add User</Link></h4>
               <h4><Link to="/" className="btn btn-info">Return Main</Link></h4>
             </div>
             <table className="table table-stripe">
               <thead>
                 <tr>
-                  <th>Title</th>
-                  <th>Description</th>
-                  <th>Author</th>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Surname</th>
+                  <th>Email</th>
+                  <th>Active</th>
+                  <th>Confirmed</th>
                 </tr>
               </thead>
               <tbody>
-                {this.state.boards.map(board =>
-                  <tr key={board.key}>
-                    <td><Link to={`/showboard/${board.key}`}>{board.title}</Link></td>
-                    <td>{board.description}</td>
-                    <td>{board.author}</td>
+                {this.state.users.map(user =>
+                  <tr key={user.key}>
+                    <td><Link to={`/showuser/${user.key}`}>{user.id}</Link></td>
+                    <td>{user.name}</td>
+                    <td>{user.surname}</td>
+                    <td>{user.email}</td>
+                    <td>{user.isactive}</td>
+                    <td>{user.isconfirmed}</td>
                   </tr>
                 )}
               </tbody>
@@ -72,4 +81,4 @@ class Board extends Component {
   }
 }
 
-export default Board;
+export default User;
