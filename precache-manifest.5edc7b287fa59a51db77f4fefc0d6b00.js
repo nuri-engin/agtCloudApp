@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "70bcce640e84f08db004172f755e569d",
+    "revision": "01fd2b45616e8c4f245a0bc0ce9f1084",
     "url": "/agtCloudApp/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/agtCloudApp/static/css/2.0624914a.chunk.css"
   },
   {
-    "revision": "dc5904a3957ad1b61678",
+    "revision": "928c3e4f1e6e60bf12ba",
     "url": "/agtCloudApp/static/css/main.34de6062.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/agtCloudApp/static/js/2.c202aafe.chunk.js"
   },
   {
-    "revision": "dc5904a3957ad1b61678",
-    "url": "/agtCloudApp/static/js/main.b5b29c41.chunk.js"
+    "revision": "928c3e4f1e6e60bf12ba",
+    "url": "/agtCloudApp/static/js/main.6e62a5f6.chunk.js"
   },
   {
     "revision": "9b083d5b583707cc64a4",

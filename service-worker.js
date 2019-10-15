@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/agtCloudApp/precache-manifest.f383b477bb0d7f83802d52957bfe38d5.js"
+  "/agtCloudApp/precache-manifest.5edc7b287fa59a51db77f4fefc0d6b00.js"
 );
 
 self.addEventListener('message', (event) => {
