@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
 
+const h4Style = {display:"inline"};
+
 class User extends Component {
   constructor(props) {
     super(props);
@@ -47,8 +49,8 @@ class User extends Component {
           </div>
           <div className="panel-body">
             <div>
-              <h4><Link to="/createuser" className="btn btn-primary">Add User</Link></h4>
-              <h4><Link to="/" className="btn btn-info">Return Main</Link></h4>
+              <h4 style={h4Style}><Link to="/createuser" className="btn btn-primary">Add User</Link></h4>
+              <h4 style={h4Style}><Link to="/" className="btn btn-info">Return Main</Link></h4>
             </div>
             <table className="table table-stripe">
               <thead>
@@ -68,8 +70,8 @@ class User extends Component {
                     <td>{user.name}</td>
                     <td>{user.surname}</td>
                     <td>{user.email}</td>
-                    <td>{user.isactive}</td>
-                    <td>{user.isconfirmed}</td>
+                    <td>{user.isactive ? "True" : "False"}</td>
+                    <td>{user.isconfirmed ? "True" : "False"}</td>
                   </tr>
                 )}
               </tbody>

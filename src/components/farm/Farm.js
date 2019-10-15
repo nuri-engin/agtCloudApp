@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import firebase from '../../Firebase';
 
+const h4Style = {display:"inline"};
+
 class Farm extends Component {
   constructor(props) {
     super(props);
@@ -44,8 +46,8 @@ class Farm extends Component {
           </div>
           <div className="panel-body">
             <div>
-              <h4><Link to="/createfarm" className="btn btn-primary">Add Farm</Link></h4>
-              <h4><Link to="/" className="btn btn-info">Return Main</Link></h4>
+              <h4 style={h4Style}><Link to="/createfarm" className="btn btn-primary">Add Farm</Link></h4>
+              <h4 style={h4Style}><Link to="/" className="btn btn-info">Return Main</Link></h4>
             </div>
             <table className="table table-stripe">
               <thead>
